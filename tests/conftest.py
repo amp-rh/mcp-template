@@ -1,5 +1,5 @@
-import pytest
 from fastmcp import FastMCP
+import pytest
 
 from mcp_server.config import ServerConfig
 from mcp_server.server import create_server
@@ -17,4 +17,3 @@ def server_config() -> ServerConfig:
 @pytest.fixture
 def mcp_server(server_config: ServerConfig) -> FastMCP:
     return create_server(server_config)
-
