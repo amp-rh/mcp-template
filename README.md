@@ -31,6 +31,36 @@ make run
 
 The server will be available at `http://localhost:8000`.
 
+## Installation
+
+### MCP Client Integration
+
+Integrate with MCP clients to make your tools available in AI assistants:
+
+#### Claude Code (Easiest)
+
+```bash
+# Direct from GitHub (no clone needed)
+claude mcp add --transport stdio mcp-server \
+  -- uv run --with "git+https://github.com/YOUR-USERNAME/mcp-template.git" mcp-server
+
+# Or local development
+make install-claude
+```
+
+#### Other Clients
+
+We provide integration guides for:
+- **[Claude Code](examples/integrations/claude-code/)** - CLI tool (30 sec setup)
+- **[Claude Desktop](examples/integrations/claude-desktop/)** - Desktop app (5 min setup)
+- **[Continue.dev](examples/integrations/continue/)** - VS Code & JetBrains (5 min setup)
+- **[Zed Editor](examples/integrations/zed/)** - Modern editor (5 min setup)
+- **[Custom Client](examples/integrations/custom/)** - Build your own
+
+See [Integration Examples](examples/integrations/README.md) for detailed guides.
+
+For complete installation documentation, see [Installation Guide](docs/installation.md).
+
 ## Project Structure
 
 ```

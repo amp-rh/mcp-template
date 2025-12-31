@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mcp-server": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/absolute/path/to/mcp-template",
+        "run",
+        "mcp-server"
+      ],
+      "env": {
+        "MCP_SERVER_NAME": "mcp-server"
+      }
+    }
+  }
+}

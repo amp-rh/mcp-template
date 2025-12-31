@@ -1,0 +1,21 @@
+{
+  "experimental": {
+    "modelContextProtocolServers": [
+      {
+        "transport": {
+          "type": "stdio",
+          "command": "uv",
+          "args": [
+            "--directory",
+            "/absolute/path/to/mcp-template",
+            "run",
+            "mcp-server"
+          ],
+          "env": {
+            "MCP_SERVER_NAME": "mcp-server"
+          }
+        }
+      }
+    ]
+  }
+}
