@@ -44,6 +44,7 @@ project-root/
 
 ### Tooling
 
+- @.agents/docs/tooling/development-setup.md - Complete development environment setup
 - @.agents/docs/tooling/uv.md - Package management with uv
 - @.agents/docs/tooling/pytest.md - Testing with pytest
 - @.agents/docs/tooling/ruff.md - Linting and formatting
@@ -55,6 +56,7 @@ project-root/
 - @.agents/docs/patterns/typing.md - Type hints and annotations
 - @.agents/docs/patterns/logging.md - Logging conventions
 - @.agents/docs/patterns/mcp-patterns.md - MCP tool, resource, prompt patterns
+- @.agents/docs/patterns/configuration.md - Configuration management patterns
 
 ### Conventions
 

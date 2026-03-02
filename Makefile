@@ -15,6 +15,10 @@ test: ## Run tests
 test-cov: ## Run tests with coverage
 	uv run pytest --cov=src --cov-report=term-missing
 
+test-cov-html: ## Run tests with HTML coverage report
+	uv run pytest --cov=src --cov-report=html
+	@echo "Coverage report generated in htmlcov/index.html"
+
 lint: ## Run linting
 	uv run ruff check .
 
@@ -22,7 +26,15 @@ format: ## Format code
 	uv run ruff format .
 	uv run ruff check --fix .
 
+typecheck: ## Run type checking with mypy
+	uv run mypy src
+
 check: lint test ## Run all checks (lint + test)
+
+check-all: format lint typecheck test ## Run format + lint + typecheck + test
+
+watch: ## Watch for changes and run tests (requires pytest-watch)
+	uv run ptw -- -v
 
 run: ## Run MCP server locally (HTTP/SSE on port 8000)
 	uv run fastmcp run src/mcp_server/server.py:mcp --transport sse --port 8000

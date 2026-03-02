@@ -31,6 +31,8 @@ make run
 
 The server will be available at `http://localhost:8000`.
 
+For complete development setup, see [Development Setup Guide](.agents/docs/tooling/development-setup.md).
+
 ## Project Structure
 
 ```
@@ -170,10 +172,15 @@ make install       # Install dependencies
 make dev           # Install with dev dependencies
 make test          # Run tests
 make test-cov      # Run tests with coverage
+make test-cov-html # Run tests with HTML coverage report
 make lint          # Run linting
 make format        # Format code
+make typecheck     # Run type checking with mypy
+make check         # Run lint + test
+make check-all     # Run format + lint + typecheck + test
 make run           # Run server locally
 make run-dev       # Run with auto-reload
+make watch         # Watch for changes and auto-reload tests
 make build         # Build container image
 make run-container # Run container
 make clean         # Clean build artifacts

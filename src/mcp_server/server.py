@@ -18,10 +18,14 @@ def create_server(config: ServerConfig | None = None) -> FastMCP:
 mcp = create_server()
 
 
-def main() -> None:
-    mcp.run()
+def main() -> int:
+    try:
+        mcp.run()
+        return 0
+    except Exception as e:
+        print(f"Error starting server: {e}")
+        return 1
 
 
 if __name__ == "__main__":
     main()
-
